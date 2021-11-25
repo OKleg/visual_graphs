@@ -1,19 +1,19 @@
 require_relative 'graph'
 
-module  VisualGraphs
+module VisualGraphs
   class WeightedGraph < VisualGraphs::Graph
     def initialize()
       super()
     end
 
-     def self.load_from_json(path)
-       graph = Graph.load_from_json(path)
-       weighted_graph = WeightedGraph.new
-       weighted_graph.edges = graph.edges
-       weighted_graph.adjacency_list = graph.adjacency_list
-       graph_is_weighted?(graph.edges)
-       weighted_graph
-     end
+    def self.load_from_json(path)
+      graph = Graph.load_from_json(path)
+      weighted_graph = WeightedGraph.new
+      weighted_graph.edges = graph.edges
+      weighted_graph.adjacency_list = graph.adjacency_list
+      graph_is_weighted?(graph.edges)
+      weighted_graph
+    end
 
     def self.adjacency_list_init(list)
       graph = Graph.adjacency_list_init(list)
@@ -48,7 +48,5 @@ module  VisualGraphs
       end
       false
     end
-
   end
-  
 end
