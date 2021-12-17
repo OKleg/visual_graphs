@@ -68,6 +68,13 @@ graph.edges #return list of edges
 #v1,v2 vertices,w - weight
 graph.insert_edge([v1,[v2,w]])
 ```
+```ruby
+#MST_Kruskal
+#algorithm: Kruskal's (for adjacency list based weighted graph)
+graph = WeightedGraph.load_from_json(path)
+kruskal_graph = graph.kruskal
+```
+
 
 ```ruby
 
